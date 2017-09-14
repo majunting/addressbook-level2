@@ -15,6 +15,9 @@ public class Person implements ReadOnlyPerson {
     private Email email;
     private Address address;
 
+    private int sequenceNumber;
+    private int nextSequenceNumber;
+
     private final UniqueTagList tags;
     /**
      * Assumption: Every field must be present and not null.
@@ -84,4 +87,11 @@ public class Person implements ReadOnlyPerson {
         return getAsTextShowAll();
     }
 
+    public void setSequenceNumber(int num) {
+        this.sequenceNumber = num;
+    }
+
+    public int getSequenceNumber() { return sequenceNumber; }
+
+    public int getNextSequenceNumber() { return nextSequenceNumber; }
 }
